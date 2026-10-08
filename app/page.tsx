@@ -45,13 +45,12 @@ export default function Home() {
         </h2>
 
         {/* Temporary beautiful visual placeholder until you drop your babylon.jpg into the public folder */}
-        <div className="mx-auto mt-8 w-full max-w-4xl overflow-hidden rounded-2xl border border-[#d8d0c0] shadow-sm">
-          <img
-            src="https://unsplash.com"
-            alt="Babylon Abstract"
-            className="w-full h-[400px] object-cover"
-          />
-        </div>
+        <img
+  src="/babylon.jpg"
+  alt="Babylon"
+  className="mx-auto mt-8 w-full max-w-4xl rounded-2xl"
+/>
+
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#625d53]">
           Explore stories, knowledge, history and ideas through a carefully
