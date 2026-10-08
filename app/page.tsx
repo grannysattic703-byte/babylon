@@ -1,6 +1,11 @@
+import BackgroundMusic from "./BackgroundMusic";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f7f3ea] text-[#211f1a]">
+      {/* Background Audio Handler Component */}
+      <BackgroundMusic />
+
       {/* Header */}
       <header className="border-b border-[#d8d0c0] bg-[#f7f3ea]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
@@ -9,16 +14,16 @@ export default function Home() {
           </h1>
 
           <nav className="hidden gap-8 text-sm md:flex">
-            <a href="#" className="hover:text-[#8a642f]">
+            <a href="#" className="hover:text-[#8a642f] transition">
               Home
             </a>
-            <a href="#" className="hover:text-[#8a642f]">
+            <a href="#" className="hover:text-[#8a642f] transition">
               Topics
             </a>
-            <a href="#" className="hover:text-[#8a642f]">
+            <a href="#" className="hover:text-[#8a642f] transition">
               Library
             </a>
-            <a href="#" className="hover:text-[#8a642f]">
+            <a href="#" className="hover:text-[#8a642f] transition">
               About
             </a>
           </nav>
@@ -29,7 +34,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="mx-auto max-w-7xl px-6 py-24 text-center md:py-32">
         <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#8a642f]">
           Knowledge • History • Culture
@@ -37,12 +42,16 @@ export default function Home() {
 
         <h2 className="text-5xl font-semibold tracking-tight md:text-7xl">
           Discover Babylon
-        </h2><img
-  src="/babylon.jpg"
-  alt="Babylon"
-  className="mx-auto mt-8 w-full max-w-4xl rounded-2xl"
-/>
+        </h2>
 
+        {/* Temporary beautiful visual placeholder until you drop your babylon.jpg into the public folder */}
+        <div className="mx-auto mt-8 w-full max-w-4xl overflow-hidden rounded-2xl border border-[#d8d0c0] shadow-sm">
+          <img
+            src="https://unsplash.com"
+            alt="Babylon Abstract"
+            className="w-full h-[400px] object-cover"
+          />
+        </div>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#625d53]">
           Explore stories, knowledge, history and ideas through a carefully
@@ -54,7 +63,7 @@ export default function Home() {
         </button>
       </section>
 
-      {/* Topics */}
+      {/* Topics Section */}
       <section className="border-y border-[#d8d0c0] bg-[#eee8dc]">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="mb-10">
@@ -82,7 +91,7 @@ export default function Home() {
                 </p>
                 <a
                   href="#"
-                  className="mt-6 inline-block text-sm font-medium text-[#8a642f]"
+                  className="mt-6 inline-block text-sm font-medium text-[#8a642f] hover:underline"
                 >
                   Explore →
                 </a>
@@ -92,38 +101,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest */}
+      {/* Latest Articles Section */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <p className="text-sm uppercase tracking-[0.25em] text-[#8a642f]">
           From Babylon
         </p>
-
         <h3 className="mt-2 text-3xl font-semibold">
           Latest Articles
         </h3>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((article) => (
+          {[1, 2, 3].map((id) => (
             <article
-              key={article}
+              key={id}
               className="border-b border-[#d8d0c0] pb-6"
             >
               <p className="text-xs uppercase tracking-widest text-[#8a642f]">
                 Article
               </p>
-
               <h4 className="mt-3 text-xl font-semibold">
                 The Story of Ancient Knowledge
               </h4>
-
               <p className="mt-3 text-sm leading-6 text-[#625d53]">
                 A glimpse into the people, ideas and history that shaped
                 civilizations.
               </p>
-
               <a
                 href="#"
-                className="mt-5 inline-block text-sm font-medium"
+                className="mt-5 inline-block text-sm font-medium hover:text-[#8a642f] transition"
               >
                 Read article →
               </a>
